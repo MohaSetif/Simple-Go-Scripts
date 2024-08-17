@@ -3,11 +3,10 @@ package greetings
 import (
 	"errors"
 	"fmt"
-	"reflect"
 )
 
 func Hello(name string) (string, error) {
-	if name == "" || reflect.TypeOf(name).Kind() != reflect.String {
+	if name == "" {
 		return "", errors.New("wrong name")
 	}
 
